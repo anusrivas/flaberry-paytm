@@ -119,6 +119,10 @@ public class PayTM extends CordovaPlugin {
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, inErrorMessage));
             }
 
+            @Override
+            public void onBackPressedCancelTransaction() {
+                 
+            }
 
             @Override
             public void clientAuthenticationFailed(String inErrorMessage)
