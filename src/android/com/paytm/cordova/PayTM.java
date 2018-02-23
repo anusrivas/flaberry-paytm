@@ -87,7 +87,7 @@ public class PayTM extends CordovaPlugin {
         PaytmOrder order = new PaytmOrder(paramMap);
         PaytmMerchant merchant = new PaytmMerchant(this.PAYTM_GENERATE_URL, this.PAYTM_VALIDATE_URL);
 
-        this.paytm_service.initialize(order, merchant, null);
+        this.paytm_service.initialize(order, null);
         this.paytm_service.startPaymentTransaction(cordova.getActivity(), false, false, new PaytmPaymentTransactionCallback()
         {
 
